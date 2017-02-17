@@ -1,0 +1,35 @@
+ <div class="container">
+  <h2>affichage des listes des formations detailler</h2>
+  <a href="#/ajouterformation">information detailler</a>           
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Code Formation</th>
+        <th>dateAccreditation</th>
+        <th>Diplome</th>
+        <th>Double Diplome</th>
+        <th>finAccreditation</th>
+        <th>NumeroAnnee</th>
+        <th>nom de formation</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody ng-repeat="f in allformations">
+      <tr>
+        <td>{{f.codeFormation}}</td>
+        <td>{{f.debutAccreditation}}</td>
+        <td>{{f.diplome}}</td>
+        <td>{{f.doubleDiplome}}</td>
+        <td>{{f.finAccreditation}}</td>
+        <td>{{f.n0Annee}}</td>
+        <td>{{f.nomFormation}}</td>
+        <td>
+               <a class="blue-text"><i class="fa fa-user"></i></a>
+               <a class="teal-text"><i class="fa fa-pencil"></i></a>
+               <a class="red-text"><i class="fa fa-times"></i></a>
+        </td>
+      </tr>
+      <tr>
+    </tbody>
+  </table>
+</div>

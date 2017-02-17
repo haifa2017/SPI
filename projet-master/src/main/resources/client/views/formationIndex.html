@@ -1,0 +1,38 @@
+<div class="container" ng-controller="SupprimerCtrl">
+  <h2>Affichage des Formations</h2>
+ <a href="#/ajouterformation">Ajouter Formation</a>
+   
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Code Formation</th>
+        <th>Date d'Accreditation</th>
+        <th>Diplome</th>
+        <th>Double Diplome</th>
+        <th>Fin d'Accreditation</th>
+        <th>Numero de l'Annee</th>
+        <th>Nom de la  formation</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody ng-repeat="f in allformations">
+      <tr>
+        <td>{{f.codeFormation}}</td>
+        <td>{{f.debutAccreditation}}</td>
+        <td>{{f.diplome}}</td>
+        <td>{{f.doubleDiplome}}</td>
+        <td>{{f.finAccreditation}}</td>
+        <td>{{f.n0Annee}}</td>
+        <td>{{f.nomFormation}}</td>
+        <td>
+               <a class="blue-text"><i class="fa fa-user"></i></a>
+               <button ng-click="supprimerFormation(f.codeFormation)">supprimer</button>
+               
+               <a class="teal-text"><i class="fa fa-pencil"></i></a>
+               <a class="red-text"><i class="fa fa-times"></i></a>
+        </td>
+      </tr>
+      <tr>
+    </tbody>
+  </table>
+</div>
